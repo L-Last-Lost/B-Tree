@@ -437,18 +437,18 @@ void BTreeNode::merge(int idx) {
 
 
 int main() {
-	BTree t(16); // 创建一个阶数为4的B树
+	BTree t(16);
 	for(int i = 1; i <= 200; i++){
 		t.insert(Data(i));
-		t.traverse();
+		// t.traverse();
 	}
 	
-	cout << "遍历B树: ";
+	cout << "遍历B树: \n";
 	t.traverse();
 	cout << endl;
 	
 	t.remove(6);
-	cout << "删除6后的B树遍历: ";
+	cout << "删除6后的B树遍历: \n";
 	t.traverse();
 	cout << endl;
 	
@@ -457,7 +457,7 @@ int main() {
 	t.remove(12);
 	t.remove(16);
 	
-	cout << "最终B树遍历: ";
+	cout << "最终B树遍历: \n";
 	t.traverse();
 	cout << endl;
 	
